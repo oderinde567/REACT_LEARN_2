@@ -1,43 +1,64 @@
 import { Badge } from "./components/Badge"
+import { Counter } from "./components/Counter"
+import Greeting from "./components/Greeting"
+import Notification from "./components/Notification"
+import UserList from "./components/UserList"
+import { UserProfile } from "./components/UserProfile"
+import UserStatus from "./components/UserStatus"
 import Welcome from "./components/Welcome"
 import WelcomeMessage from "./components/WelcomeMessage"
-import UserList from "./components/UserList"
-import Greetings from "./components/Greetings"
-import UserStatus from "./components/UserList"
-import Notification from "./components/Notification"
 
 
 function App() {
   // Simulated app state
 
-  const isLoggedIn: boolean = true;
+  const isLoggedIn:boolean = true;
   const userIsActive:boolean = false;
-  const hasUnreadMessage: boolean = false;
+  const hasUnreadMessage:boolean = false;
 
- return (
-  <>
+  return (
+    <>
 
-  {/*Props*/}
-  {/* Components are useless if they always display the same things. Pro allow us to pass data down into a component to customize, it just like passing arguments to a function */}
 
-  {/* <Welcome name="Femi"/>
-  <WelcomeMessage/>
- <Badge label="New" color="blue" />
- <Badge label="New" color="green" />
-    <UserList/>  */}
-   
-    <div style={{padding: "20px", maxWidth: "600px", margin:"0 auto" }}>
-        <h1>React Conditional Rendering examples</h1>
+{/* Props */}
+{/* Components are useless if they always display the same things. Prop allow us to pass data down into a component to customize, it just like passing arguments to a function */}
+     {/* <Welcome name="Tenny"/>
+     <WelcomeMessage />
+     <Badge label="New" color="red" />
+     <Badge label="Old" color="green" />  
+     <UserList /> */}
 
-        <Greetings isLoggedIn={isLoggedIn} />
 
-        <UserStatus isActive = {userIsActive} />
-        <Notification hasUnreadMessage={hasUnreadMessage}/>
+        {/* <h1>React Conditional Rendering Examples</h1>
 
-    </div>
+        <Greeting isLoggedIn={isLoggedIn} />
 
-  </>
- )
-}
+        <UserStatus isActive={userIsActive} />
+        <Notification hasUnreadMessage={hasUnreadMessage} /> */}
+
+  <h2>React State - Clear Examples</h2>
+<div style={styles.container}>
+
+  <Counter />
+  <UserProfile />
+
+</div>
+
+
+
+    </>
+  )
+};
+
+const styles = {
+  container: {
+    padding: '40px',
+    fontFamily: 'sans-serif',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '20px'
+  }
+} as const
 
 export default App
