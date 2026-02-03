@@ -10,12 +10,12 @@ gender: "";
 
 */
 
-function UserStatus({ isActive } : UserStatusProps) {
+function UserStatus({ userIsActive } : UserStatusProps) {
   return (
     <div>
         <h3>User Status</h3>
         <p>
-            {isActive ? 'Account is active' : ' Account is inactive'}
+            {userIsActive ? 'Account is active' : ' Account is inactive'}
         </p>
     </div>
   )
